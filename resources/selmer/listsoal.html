@@ -1,0 +1,13 @@
+{% extends "selmer/base.html" %}
+
+{% block content %}
+<ul>
+   {% for soal in soals %}
+   <li>
+      <a href="{{soal.link}}">
+         {{soal.title}}
+      </a>
+   </li>
+   {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "selmer/base.html" %}
+
+{% block content %}
+<div class="large-9 large-centered columns">
+   <h3>
+      Ini soal
+   </h3>
+   <fieldset>
+      <legend>
+         Soal nomer sekian
+      </legend>
+      {{soal|safe}}
+   </fieldset>
+</div>
+{% endblock %}

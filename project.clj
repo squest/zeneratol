@@ -1,6 +1,7 @@
 (defproject zenerator "0.1.0"
   :repl-options {:init-ns zenerator.repl}
   :dependencies [[org.clojure/clojure "1.7.0-alpha6"]
+                 [org.clojure/core.incubator "0.1.3"]
                  [ring-server "0.4.0"]
                  [lib-noir "0.9.9"]
                  [com.cemerick/url "0.1.1"]

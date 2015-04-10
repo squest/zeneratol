@@ -1,0 +1,24 @@
+{% extends "selmer/base.html" %}
+
+{% block content %}
+<form action="/backoffice/nambahsoal" method="post">
+   {{csrf-field|safe}}
+   <fieldset>
+      <legend>
+         Nambah soal
+      </legend>
+      <h3>
+         Di sini template soal
+      </h3>
+      <textarea name="templatesoal" id="" cols="30" rows="10">
+      </textarea>
+      <br/>
+      <h4>
+         Di sini clojure function
+      </h4>
+      <textarea name="function" id="" cols="30" rows="10"></textarea>
+      <br/><br/>
+      <input type="submit" class="button small" title="Submit"/>
+   </fieldset>
+</form>
+{% endblock %}

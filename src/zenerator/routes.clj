@@ -1,18 +1,26 @@
 (ns zenerator.routes
   (:require
     [compojure.core :refer :all]
-    [zenerator.pages :as page]))
+    [zenerator.pages :as page]
+    [zenerator.soal.regtemplate :as reg]
+    [noir.response :as resp]))
 
 (def home
   (routes
     (GET "/" req
-         (page/homepage))))
+         (page/list-soal))
+    (GET "/soal/:soalid"
+         [soalid]
+         (page/keluarin-soal (read-string soalid)))))
 
 (def backoffice
   (routes
     (context "/backoffice" req
              (GET "/" req
-                  "This is the backoffice"))))
+                  (page/nambah-soal))
+             (POST "/nambahsoal" req
+                   (do (reg/nambahsoal (:params req))
+                       (resp/redirect "/backoffice/"))))))
 
 (defroutes
   all-routes
