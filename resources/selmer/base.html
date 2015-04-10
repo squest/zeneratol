@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href="/assets/normalize.css" rel="stylesheet"/>
+    <link href="/assets/foundation.min.css" rel="stylesheet"/>
+    <link href="/css/main-style.css" rel="stylesheet"/>
+    <script type="text/javascript">
+      window.MathJax = {
+        tex2jax: {
+          inlineMath: [['$', '$'], ["\\(", "\\)"]],
+          processEscapes: false
+        }
+      };
+    </script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+    </script>
+    <meta charset="UTF-8"/>
+    <title>
+      {{title}}
+    </title>
+    </head>
+  <body class="row">
+    <header class="zpanel2">
+      <h1>
+        {{headline}}
+      </h1>
+      <h4 id="subtitle">
+      </h4>
+      
+    </header>
+    <div class="large-12 large-centered columns">
+      <p>
+        This is a mathjax call $ \sum_{x}^{x} n^2 + n = $ ?
+      </p>
+    </div>
+    <footer>
+      
+    </footer>
+    <script src="assets/react.min.js">
+    </script>
+  </body>
+</html>
